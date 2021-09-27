@@ -1,40 +1,16 @@
 # Tendo Toy Project
-#Prompt
+This is a simple project for handling a review of a patient visit. It can be run with
 
-Please build a toy program to collect patient feedback after an appointment. Attached is some JSON with sample data about patients and their appointments which should drive the program. And below is a sample script with what questions each patient should be asked.
+dotnet run --project ConsoleApp\ConsoleApp.csproj
 
-Please do NOT feel compelled to go crazy with this. We know we’ve given you a relatively small amount of time, and we want this to be fun. You just need to build something clean that functions.
-
-Sample Script
-
-**Program asks:** "Hi [Patient First Name], on a scale of 1-10, would you recommend Dr [Doctor Last Name] to a friend or family member? 1 = Would not recommend, 10 = Would strongly recommend"
-
-Assume patient responds with an integer between 1-10
-
-**Program asks:** "Thank you. You were diagnosed with [Diagnosis]. Did Dr [Doctor Last Name] explain how to manage this diagnosis in a way you could understand?"
-
-Record whatever the patient responds with, consider special treatment of Yes/No
-
-**Program asks:** "We appreciate the feedback, one last question: how do you feel about being diagnosed with [Diagnosis]?"
-
-Record whatever the patient responds with
-
-**Program ends with:** "Thanks again! Here’s what we heard:"
-
-Take some creative license with how patients are shown what the program recorded
-
-#Details/Other Requirements
-
--Please make a basic architecture diagram
--If you know any of the languages/technologies in our tech stack, please use them, i.e.
--If you know Go, code the back end in Go
--If you know React, build a React UI (otherwise a command line UI is fine)
--If you are familiar with cloud services (i.e. AWS), host the program in the cloud (otherwise running this locally is fine)
--BUT you do NOT have to use Postgres or neo4j to store patient responses, you can if you want, but dumping patient responses to a JSON file or any database is fine
--Please have at least one unit test or integration test that passes - we like TDD :)
--Please prepare for code review, push your code up to GitHub or come prepared to show your code via an IDE, the code must be shared with us for future reference by the end of the interview
--Please prepare to explain why you wrote your code the way you did - your thought process is as important as your code
--Please prepare to explain how you worked through any technical problems you encountered
--If you had to learn a new technology, please prepare to explain how you approached learning that new technology
--Please prepare some thoughts on what you might have done differently, or what you would do next, if you were to keep working on this
--Feel free to ask as many questions as you like, reach out if you ever get stuck, just reply all to this email
+Next steps
+1. Add a file reader to initialize data from JSON
+2. Update the data repository to use a database
+3. Create a web based UI
+4. Begin the dployment to AWS
+	1. Create S3 bucket for files
+	2. Refactor file processor into a lambda function
+	3. Configure trigger to process file when loaded to S3 bucket
+	4. Deploy web UI with services for accessessing database
+	5. Create an email that notifies patient that there is a review to perform
+	6. Replace mock sentiment analysis with Amazon Comprehend
