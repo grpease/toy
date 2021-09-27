@@ -1,5 +1,5 @@
 # Tendo Toy Project
-##Prompt
+#Prompt
 
 Please build a toy program to collect patient feedback after an appointment. Attached is some JSON with sample data about patients and their appointments which should drive the program. And below is a sample script with what questions each patient should be asked.
 
@@ -23,7 +23,7 @@ Record whatever the patient responds with
 
 Take some creative license with how patients are shown what the program recorded
 
-##Details/Other Requirements
+#Details/Other Requirements
 
 -Please make a basic architecture diagram
 -If you know any of the languages/technologies in our tech stack, please use them, i.e.
